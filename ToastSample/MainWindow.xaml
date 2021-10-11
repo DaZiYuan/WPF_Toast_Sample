@@ -11,7 +11,7 @@
         <Button Click="Button_Click_1">2</Button>
         <Button Click="Button_Click_2">3</Button>
         <Button Click="Button_Click_3">4</Button>
-        <Button>1</Button>
+        <Button Click="Button_Click_4">5</Button>
         <Button>1</Button>
     </StackPanel>
 </Window>

@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0-windows10.0.20348.0</TargetFramework>
+    <ApplicationIcon>Expander.ico</ApplicationIcon>
+    <StartupObject />
+    <AssemblyName>ToastSample</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Assets\1.mp3" />
+    <None Remove="Assets\2.m4a" />
+    <None Remove="Assets\883-48x48.jpg" />
+    <None Remove="Assets\Andrew.jpg" />
+    <None Remove="Assets\hero.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Assets\1.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\2.m4a">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\883-48x48.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Andrew.jpg" />
+    <Content Include="Assets\hero.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Toolkit.Uwp.Notifications" Version="7.1.0" />
+  </ItemGroup>
+
+</Project>
