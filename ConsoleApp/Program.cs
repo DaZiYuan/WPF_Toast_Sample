@@ -37,6 +37,21 @@ namespace ConsoleApp
 
             string _path = AppDomain.CurrentDomain.BaseDirectory;
 
+            ToastNotificationManagerCompat.OnActivated += toastArgs =>
+            {
+                // Obtain the arguments from the notification
+                ToastArguments args = ToastArguments.Parse(toastArgs.Argument);
+
+                // Obtain any user input (text boxes, menu selections) from the notification
+                //ValueSet userInput = toastArgs.UserInput;
+
+                //// Need to dispatch to UI thread if performing UI operations
+                //Application.Current.Dispatcher.Invoke(delegate
+                //{
+                //    // TODO: Show the corresponding content
+                //    MessageBox.Show("Toast activated. Args: " + toastArgs.Argument);
+                //});
+            };
             while (true)
             {
                 string command = Console.ReadLine();
@@ -59,7 +74,7 @@ namespace ConsoleApp
                           .Show();
                         break;
                     case "3":
-                        imgPath = Path.Combine(_path, "Assets\\hero.jpg");
+                        imgPath = Path.Combine(_path, "Assets\\1.gif");
                         new ToastContentBuilder()
                          .AddText("Hero image", hintMaxLines: 1)
                          .AddText("文字2")
